@@ -1,0 +1,178 @@
+---
+title: Personnal coding rules in R
+author: Virgile
+date: '2017-08-24'
+slug: personnal-coding-rules-in-r
+categories:
+  - R
+tags:
+  - R
+  - code
+---
+
+
+*Note: in the following doc, many R's error messages are displayed in French*
+
+## References
+
+[*The R Inferno* by Patrick Burns](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
+
+[Hadley's style guide](http://adv-r.had.co.nz/Style.html)
+
+[Google's R style guide](https://google.github.io/styleguide/Rguide.xml)
+
+
+## Style guide
+
+Two references are unavoidable, the [Hadley's style guide](http://adv-r.had.co.nz/Style.html) and the [Google's R style guide](https://google.github.io/styleguide/Rguide.xml).
+
+Has Hadley wrote, the most important is to have a consistent style, and clear.
+
+In the following document, I use:
+
+
+```{r, eval=FALSE}
+# GOOD
+variable.Name
+variableName
+variable_Name
+
+# BAD
+variablename
+```
+
+
+I also like to write the name of the variable in fist and then it's specification:
+
+```{r, eval=FALSE}
+# GOOD
+kk = 1:5
+kk_max = max(kk)
+kk_sd = sd(kk)
+kk_log10Mean = log10(mean(kk))
+
+km = 1:10
+km_max = max(km)
+km_sd = sd(km)
+km_log10Mean = log10(mean(km))
+
+# BAD
+max_kk = max(kk)
+sd_kk = sd(kk)
+log10Mean_kk = log10(mean(kk))
+
+max_km = max(km)
+sd_km = sd(km)
+log10Mean_km = log10(mean(km))
+```
+
+
+## Don't do
+
+Some letters are use in `R`, like `T` use for the boolean `TRUE`, therefore, do not use as variable:
+
+
+```{r, eval=FALSE}
+# BAD
+T # TRUE
+F # FALSE
+TRUE
+FALSE
+
+# GOOD
+Temperature ; Total
+Fox ; Flower
+```
+
+Function already use:
+
+```{r, eval=FALSE}
+# BAD
+c() # vector
+lm() # linear model
+```
+
+## `<-` or `=`
+
+Big question in R:
+[revolutionanalytics?](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
+[stackoverflow](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and)
+
+Let's take this function: `median(x, na.rm = FALSE, ...)`, and look at this:
+
+```{r, eval=FALSE}
+median(x <- 1:10)
+median(x = 1:10)
+
+# but:
+median(a <- 1:10)
+median(a = 1:10)
+
+# and also:
+b
+median(b <- 1:10)
+b
+```
+
+
+## Loop
+
+```{r, eval=FALSE}
+# GOOD
+if (y == 0) {
+  log(x)
+} else {
+  y ^ x
+}
+
+# BAD
+if (y == 0) {
+  log(x)
+}
+else {
+  y ^ x
+}
+```
+
+
+## Functions
+
+- Deprecated: `deprecate()`
+- Errors: `stop()`
+- Warnings: `warning()`
+- Return: `return()`
+
+
+## Boolean
+
+[From this answer in stackexchange](http://stackoverflow.com/questions/6558921/r-boolean-operators-and)
+
+Difference between `&` and `&&`
+
+```{r}
+((-2:2) >= 0) & ((-2:2) <= 0)
+((-2:2) >= 0) && ((-2:2) <= 0)
+```
+
+
+Difference between `|` and `||`
+
+```{r}
+((-5:-1) >= 0) | ((-2:2) <= 0)
+((-5:-1) >= 0) || ((-2:2) <= 0)
+```
+
+
+```{r, eval=FALSE}
+a
+# Erreur : objet 'a' introuvable
+TRUE || a
+# [1] TRUE
+FALSE && a
+# [1] FALSE
+TRUE | a
+# Erreur : objet 'a' introuvable
+FALSE & a
+# Erreur : objet 'a' introuvable
+```
+

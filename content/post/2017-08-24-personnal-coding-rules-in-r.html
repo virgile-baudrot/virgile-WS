@@ -1,0 +1,137 @@
+---
+title: Personnal coding rules in R
+author: Virgile
+date: '2017-08-24'
+slug: personnal-coding-rules-in-r
+categories:
+  - R
+tags:
+  - R
+  - code
+---
+
+
+
+<p><em>Note: in the following doc, many R’s error messages are displayed in French</em></p>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"><em>The R Inferno</em> by Patrick Burns</a></p>
+<p><a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a></p>
+<p><a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a></p>
+</div>
+<div id="style-guide" class="section level2">
+<h2>Style guide</h2>
+<p>Two references are unavoidable, the <a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a> and the <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a>.</p>
+<p>Has Hadley wrote, the most important is to have a consistent style, and clear.</p>
+<p>In the following document, I use:</p>
+<pre class="r"><code># GOOD
+variable.Name
+variableName
+variable_Name
+
+# BAD
+variablename</code></pre>
+<p>I also like to write the name of the variable in fist and then it’s specification:</p>
+<pre class="r"><code># GOOD
+kk = 1:5
+kk_max = max(kk)
+kk_sd = sd(kk)
+kk_log10Mean = log10(mean(kk))
+
+km = 1:10
+km_max = max(km)
+km_sd = sd(km)
+km_log10Mean = log10(mean(km))
+
+# BAD
+max_kk = max(kk)
+sd_kk = sd(kk)
+log10Mean_kk = log10(mean(kk))
+
+max_km = max(km)
+sd_km = sd(km)
+log10Mean_km = log10(mean(km))</code></pre>
+</div>
+<div id="dont-do" class="section level2">
+<h2>Don’t do</h2>
+<p>Some letters are use in <code>R</code>, like <code>T</code> use for the boolean <code>TRUE</code>, therefore, do not use as variable:</p>
+<pre class="r"><code># BAD
+T # TRUE
+F # FALSE
+TRUE
+FALSE
+
+# GOOD
+Temperature ; Total
+Fox ; Flower</code></pre>
+<p>Function already use:</p>
+<pre class="r"><code># BAD
+c() # vector
+lm() # linear model</code></pre>
+</div>
+<div id="or" class="section level2">
+<h2><code>&lt;-</code> or <code>=</code></h2>
+<p>Big question in R: <a href="http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html">revolutionanalytics?</a> <a href="http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">stackoverflow</a></p>
+<p>Let’s take this function: <code>median(x, na.rm = FALSE, ...)</code>, and look at this:</p>
+<pre class="r"><code>median(x &lt;- 1:10)
+median(x = 1:10)
+
+# but:
+median(a &lt;- 1:10)
+median(a = 1:10)
+
+# and also:
+b
+median(b &lt;- 1:10)
+b</code></pre>
+</div>
+<div id="loop" class="section level2">
+<h2>Loop</h2>
+<pre class="r"><code># GOOD
+if (y == 0) {
+  log(x)
+} else {
+  y ^ x
+}
+
+# BAD
+if (y == 0) {
+  log(x)
+}
+else {
+  y ^ x
+}</code></pre>
+</div>
+<div id="functions" class="section level2">
+<h2>Functions</h2>
+<ul>
+<li>Deprecated: <code>deprecate()</code></li>
+<li>Errors: <code>stop()</code></li>
+<li>Warnings: <code>warning()</code></li>
+<li>Return: <code>return()</code></li>
+</ul>
+</div>
+<div id="boolean" class="section level2">
+<h2>Boolean</h2>
+<p><a href="http://stackoverflow.com/questions/6558921/r-boolean-operators-and">From this answer in stackexchange</a></p>
+<p>Difference between <code>&amp;</code> and <code>&amp;&amp;</code></p>
+<pre class="r"><code>((-2:2) &gt;= 0) &amp; ((-2:2) &lt;= 0)</code></pre>
+<pre><code>## [1] FALSE FALSE  TRUE FALSE FALSE</code></pre>
+<pre class="r"><code>((-2:2) &gt;= 0) &amp;&amp; ((-2:2) &lt;= 0)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>Difference between <code>|</code> and <code>||</code></p>
+<pre class="r"><code>((-5:-1) &gt;= 0) | ((-2:2) &lt;= 0)</code></pre>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE FALSE</code></pre>
+<pre class="r"><code>((-5:-1) &gt;= 0) || ((-2:2) &lt;= 0)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>a
+# Erreur : objet &#39;a&#39; introuvable
+TRUE || a
+# [1] TRUE
+FALSE &amp;&amp; a
+# [1] FALSE
+TRUE | a
+# Erreur : objet &#39;a&#39; introuvable
+FALSE &amp; a
+# Erreur : objet &#39;a&#39; introuvable</code></pre>
+</div>
