@@ -42,15 +42,12 @@ weight = 1
  
 +++
 
-# Biography
+# Data Scientist in Ecology, Ecotoxicology and Eco-epidemiology
 
-I am a researcher in EcoHealth (actually a postdoc student at the CNRS Lab LBBE and University of Lyon 1).
+I am a researcher in EcoHealth (actually in a postdoc position at the CNRS Lab LBBE and University of Lyon 1).
+
 I am particularly interested in how contaminants, such as chemical compounds and parasites, are transfered within a food web and how the structure and composition of the fodd web respond to it.
 
+![darwin tree](/static/img/darwin_tree.png)
 
-
-Modelling and Data analyst in Ecology, Ecotoxicology and Eco-epidemiology
-
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
