@@ -23,9 +23,6 @@
   <img src="{{ "/img/" | relURL }}{{ .Params.image }}" class="pub-banner" itemprop="image">
   {{end}}
 
-  <h3>{{ i18n "abstract" }}</h3>
-  <p class="pub-abstract" itemprop="text">{{ .Params.abstract | markdownify }}</p>
-
   {{ if (.Params.publication_types) and (ne (index .Params.publication_types 0) "0") }}
   <div class="row">
     <div class="col-sm-1"></div>
