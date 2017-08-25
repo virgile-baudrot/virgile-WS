@@ -31,6 +31,9 @@ defaultContentLanguageInSubdir = false
   ## phone = "-"
   skype = "virgile baudrot"
   ## telegram = ""
+  
+  ## picture of the homepage
+  homepicture = "darwin_tree.png"
 
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = ""
@@ -102,7 +105,8 @@ defaultContentLanguageInSubdir = false
     'Work in progress',  # 3
     'Technical report',  # 4
     'Book',  # 5
-    'Book chapter'  # 6
+    'Book chapter',  # 6
+    'PhD Thesis' # 7
   ]
 
   # Social/Academic Networking
@@ -156,33 +160,38 @@ link = "https://www.linkedin.com/in/virgile-baudrot-03a08195"
 
 [[menu.main]]
   name = "Home"
-  url = "#about"
+  url = "#start"
   weight = 1
 
 [[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
+  name = "About Me"
+  url = "#about"
   weight = 2
+
+[[menu.main]]
+  name = "Publications"
+  url = "#publications"
+  weight = 3
 
 [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   name = "Projects"
   url = "#projects"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
   name = "Teaching"
   url = "#teaching"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 7
 
 # Taxonomies.
 [taxonomies]
