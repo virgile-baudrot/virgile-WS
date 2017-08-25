@@ -14,14 +14,34 @@ weight = 60
 
 +++
 
-This is an example of using the *custom* widget to create your own homepage section.
+> […] a vital next step will be to promote the training of scientists with expertise in both mathematics and biology.
 
-I am a teaching instructor for the following courses at University X:
+**Alan Hastings and Margaret A. Palmer (2003)** - *A Bright Future for Biologists and Mathematicians?* Science 299, pp. 2003-2004
 
-- CS101: An intro to computer science
-- CS102: An intro to computer science
-- CS103: An intro to computer science
-- CS104: An intro to computer science
-- CS105: An intro to computer science
-- CS106: An intro to computer science
-- CS107: An intro to computer science
+---
+
+**Université de Franche-Comté**
+
+*2014-2015 | 64 h*
+
+Lecture                        | Subject                                                   | Hours
+-------------------------------|-----------------------------------------------------------|------
+Licence 1 - Starter ST         |C2I - produire, traiter, diffuser des documents numériques | 14 h
+Licence 2 - Biologie           |Biostatistiques                                            | 22 h
+Licence Pro - MINA             |Analyse de données multidimensionnelles                    | 11 h
+Licence 3 - Biologie           |Biologie numérique et statistique                          | 9 h
+Master 1 - ECoS                |Modélisation des dynamiques spatiales                      | 8 h
+
+*2015-2016 | 17 h*
+
+Lecture                        | Subject                                                   | Hours
+-------------------------------|-----------------------------------------------------------|------
+Licence 1 - Starter ST         |Mathématiques - équations différentielles                  | 14 h
+
+
+Co-supervisor
+: 2014 - *Quentin Richard*
+: UCB Lyon 1 - M2 Mathématiques Appliquées et Statistiques
+: Co-supervising with Antoine Perasso (MCF - UBFC)
+: *Étude du comportement de prédation par analyse mathématique et simulations numériques de systèmes proies-prédateur*
+
