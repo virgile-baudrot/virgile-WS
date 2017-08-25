@@ -1,0 +1,18 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+<!-- About widget -->
+<div class="row" itemprop="homepage">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <div id="profile">
+      <div class="portrait" style="background-image: url('{{ $.Site.BaseURL }}img/{{ $.Site.Params.homepicture }}');"></div> 
+      <meta itemprop="image" content="{{ $.Site.BaseURL }}img/{{ $.Site.Params.homepicture }}">
+    </div>
+    <div class="portrait-title">
+      <p itemprop="jobTitle">{{ $page.Params.title }}</p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8" itemprop="description">
+    {{ $page.Content }}
+    <div class="row">
+</div>
