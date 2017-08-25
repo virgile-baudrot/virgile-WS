@@ -1,13 +1,13 @@
 +++
 # About/Biography widget.
 
-date = "2016-04-20T00:00:00"
+date = "2017-08-24T00:00:00"
 draft = false
 
 widget = "about"
 
 # Order that this section will appear in.
-weight = 1
+weight = 2
 
 # List your academic interests.
 [interests]
@@ -42,12 +42,20 @@ weight = 1
  
 +++
 
-# Data Scientist in Ecology, Ecotoxicology and Eco-epidemiology
+# Salut
 
-I am a researcher in EcoHealth (actually in a postdoc position at the CNRS Lab LBBE and University of Lyon 1).
+In the network of my research interests, the hub is the following question:
 
-I am particularly interested in how contaminants, such as chemical compounds and parasites, are transfered within a food web and how the structure and composition of the fodd web respond to it.
+## How contaminants travel into food webs?
 
-![darwin tree](/static/img/darwin_tree.png)
+More specifically, I am a young researcher in *EcoHealth* sciences, and for now I am a postdoc at the CNRS Lab LBBE in the University of Lyon 1.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+I did a PhD on *modeling trophic interaction including transfert of biological and chemical contaminants*, with several applications with the parasite *Echinococcus multilocularis*  for the eco-epidemiological part and on *heavy metals* for the ecotoxicological part.
+
+The question underlying my research is *how contaminants, such as chemical compounds and parasites, are transfered within a food web and how the structure and composition of the fodd web respond to it?*
+
+And to answer those questions, I develop *dynamical systems* and *Bayesian models*.
+
+$$ \mathcal{S}kills=\int_\Omega f(ecology,theory,dynamic,Bayes) d \omega $$
+
+
