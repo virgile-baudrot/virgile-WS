@@ -8,71 +8,84 @@ categories:
 tags:
   - R
   - code
+editor_options: 
+  chunk_output_type: console
 ---
 
 
 
-<p><em>Note: in the following doc, many R’s error messages are displayed in French</em></p>
-<div id="references" class="section level2">
-<h2>References</h2>
-<p><a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"><em>The R Inferno</em> by Patrick Burns</a></p>
-<p><a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a></p>
-<p><a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a></p>
+<p><em>Note: the following post is supposed to be updated regularly</em></p>
+<div id="style-guides" class="section level2">
+<h2>Style guides</h2>
+<p>Two references are unavoidable, the <a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a> and the <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a>. And also <a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"><em>The R Inferno</em> by Patrick Burns</a></p>
+<p>Has Hadley wrote, the most important is to have a consistent and clear style.</p>
 </div>
-<div id="style-guide" class="section level2">
-<h2>Style guide</h2>
-<p>Two references are unavoidable, the <a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a> and the <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a>.</p>
-<p>Has Hadley wrote, the most important is to have a consistent style, and clear.</p>
-<p>In the following document, I use:</p>
+<div id="notations" class="section level2">
+<h2>Notations</h2>
+<p>Starting with variable, choices doesn’t really matters.</p>
+<p>I use this style of notation</p>
 <pre class="r"><code># GOOD
-variable.Name
 variableName
 variable_Name
 
+# Not that good (personnal taste)
+variable.Name
+
 # BAD
 variablename</code></pre>
-<p>I also like to write the name of the variable in fist and then it’s specification:</p>
+<p>I also like to write the name of the variable in first and then it’s specification:</p>
 <pre class="r"><code># GOOD
 kk = 1:5
 kk_max = max(kk)
 kk_sd = sd(kk)
 kk_log10Mean = log10(mean(kk))
 
-km = 1:10
-km_max = max(km)
-km_sd = sd(km)
-km_log10Mean = log10(mean(km))
-
-# BAD
+# BAD (personnal taste)
 max_kk = max(kk)
 sd_kk = sd(kk)
-log10Mean_kk = log10(mean(kk))
-
-max_km = max(km)
-sd_km = sd(km)
-log10Mean_km = log10(mean(km))</code></pre>
+log10Mean_kk = log10(mean(kk))</code></pre>
 </div>
 <div id="dont-do" class="section level2">
 <h2>Don’t do</h2>
-<p>Some letters are use in <code>R</code>, like <code>T</code> use for the boolean <code>TRUE</code>, therefore, do not use as variable:</p>
+<p>Some letters are use in <code>R</code>, like <code>T</code> which is used for the boolean <code>TRUE</code>, therefore, do not use as variable:</p>
 <pre class="r"><code># BAD
-T # TRUE
-F # FALSE
+T 
+F 
 TRUE
 FALSE
 
 # GOOD
 Temperature ; Total
 Fox ; Flower</code></pre>
-<p>Function already use:</p>
+<div id="name-of-functions" class="section level3">
+<h3>name of functions</h3>
+<p>I do not have a definitive point of view for naming function. Of course, I do not use name already used:</p>
 <pre class="r"><code># BAD
 c() # vector
 lm() # linear model</code></pre>
+<p>And I use S3 dispatch when necessary, with the <strong>generic functions</strong> <code>plot.myClass</code>, <code>print.myClass</code>, <code>summary.myClass</code>, …</p>
+<p>Look at the difference for Figures <a href="#fig:withoutS3plot"><strong>??</strong></a> and See Figure <a href="#fig:withS3plot">1</a></p>
+<pre class="r"><code>a &lt;- data.frame(col1 = 1:10, col2 = 1:10)
+
+plot(a)</code></pre>
+<p><img src="/"/"  # End your URL with a `/` trailing slash.post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withoutS3plot-1.png" width="672" /></p>
+<pre class="r"><code>class(a) &lt;- &quot;myClass&quot;
+
+plot.myClass = function(x) plot(x[[1]] ~ x[[2]], type = &quot;l&quot;)
+
+plot(a)</code></pre>
+<div class="figure"><span id="fig:withS3plot"></span>
+<img src="/"/"  # End your URL with a `/` trailing slash.post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withS3plot-1.png" alt="Result of S3 dispatch on class myClass." width="672" />
+<p class="caption">
+Figure 1: Result of S3 dispatch on class myClass.
+</p>
 </div>
-<div id="or" class="section level2">
-<h2><code>&lt;-</code> or <code>=</code></h2>
+</div>
+<div id="assignement-operator---or" class="section level3">
+<h3>Assignement operator: <code>&lt;-</code> or <code>=</code></h3>
 <p>Big question in R: <a href="http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html">revolutionanalytics?</a> <a href="http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">stackoverflow</a></p>
-<p>Let’s take this function: <code>median(x, na.rm = FALSE, ...)</code>, and look at this:</p>
+<p>Following the answer on <a href="https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and">stackoverflow</a> by <a href="https://stackoverflow.com/users/134830/richie-cotton">Richie Cotton</a>, lets</p>
+<p>Let’s take this function: <code>median(x, na.rm = FALSE, ...)</code>, and look at all of these codes:</p>
 <pre class="r"><code>median(x &lt;- 1:10)
 median(x = 1:10)
 
@@ -84,9 +97,66 @@ median(a = 1:10)
 b
 median(b &lt;- 1:10)
 b</code></pre>
+<p>Another thing to test to understand difference between <code>=</code> and <code>&lt;-</code></p>
+<pre class="r"><code>a &lt;- b = 5
+a = b = 5 ; a ; b
+a = 5 = b
+6 -&gt; c ; c
+c &lt;- 6 -&gt; d ; c ; d</code></pre>
+<p>When you create a <code>data.frame</code>, or a <code>list</code>, you have to use <code>=</code> inside, while <code>&lt;-</code> does not return an error:</p>
+<pre class="r"><code>myDf1 &lt;- data.frame(e &lt;- 6) ; myDf1</code></pre>
+<pre><code>##   e....6
+## 1      6</code></pre>
+<pre class="r"><code>myDf2 &lt;- data.frame(e = 6) ; myDf2 </code></pre>
+<pre><code>##   e
+## 1 6</code></pre>
+<pre class="r"><code>myList1 &lt;- list(e &lt;- 6) ; myList1</code></pre>
+<pre><code>## [[1]]
+## [1] 6</code></pre>
+<pre class="r"><code>myList2 &lt;- list(e = 6) ; myList2</code></pre>
+<pre><code>## $e
+## [1] 6</code></pre>
+<p>Finally, just use <strong>space</strong> in a write way to avoid the following mistake:</p>
+<pre class="r"><code>a &lt;- 3
+a&lt; -3</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<p>Finally, I use <code>&lt;-</code> operator for assignement, and <code>=</code> inside functions.</p>
 </div>
-<div id="loop" class="section level2">
-<h2>Loop</h2>
+<div id="spacing" class="section level3">
+<h3>Spacing</h3>
+<p>Spacing is used to have a clear code. * Spaces around assignements: <code>a = b</code>, <code>a &lt;- b</code> * A space after a coma: <code>myMatrix[2, 2]</code> * No space in brackets: <code>c(1, 4, 9)</code> * Change of line every 80 characters * Change of line when repetting an assignement</p>
+<pre class="r"><code># GOOD
+myList &lt;- list(a = 1,
+               b = &quot;fourchette&quot;,
+               c = letters[1:10],
+               d = 1:10,
+               e = matrix(1:9, ncol=3),
+               f = &quot;couteau&quot;,
+               g = &quot;chocolat&quot;)
+
+myList[[5]][2, 2]</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>## GOOD but, I would put this long text in a separate file, and then load it
+text_Miserable_Review &lt;- &quot;Tant qu’il existera, par le fait des lois et des
+moeurs, une damnation sociale créant artificiellement, en pleine civilisation,
+des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ;
+tant que les trois problèmes du siècle, la dégradation de l’homme par le
+prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par
+la nuit, ne seront pas résolus ; tant que, dans de certaines régions, 
+l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue 
+plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des
+livres de la nature de celui-ci pourront ne pas être inutiles.&quot;
+
+# BAD
+myList &lt;- list(a = 1, b = &quot;fourchette&quot;, c = letters[1:10], d = 1:10, e = matrix(1:9, ncol=3), f = &quot;couteau&quot;, g = &quot;chocolat&quot;)
+
+text_Miserable_Review &lt;- &quot;Tant qu’il existera, par le fait des lois et des moeurs, une damnation sociale créant artificiellement, en pleine civilisation, des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ; tant que les trois problèmes du siècle, la dégradation de l’homme par le prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par la nuit, ne seront pas résolus ; tant que, dans de certaines régions, l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des livres de la nature de celui-ci pourront ne pas être inutiles.&quot;
+
+# Very BAD
+myList&lt;-list(a=1,b=&quot;fourchette&quot;,c=letters[1:10],d=1:10,e=matrix(1:9,ncol=3),f=&quot;couteau&quot;,g=&quot;chocolat&quot;)</code></pre>
+</div>
+<div id="ifelse-what-else" class="section level3">
+<h3><code>ifelse</code> what else</h3>
 <pre class="r"><code># GOOD
 if (y == 0) {
   log(x)
@@ -94,13 +164,14 @@ if (y == 0) {
   y ^ x
 }
 
-# BAD
+# GOOD if less than 80 characters
+if (y == 0) log(x)
+
+# GOOD also
 if (y == 0) {
   log(x)
-}
-else {
-  y ^ x
-}</code></pre>
+} else stop(&quot;error message&quot;)</code></pre>
+</div>
 </div>
 <div id="functions" class="section level2">
 <h2>Functions</h2>

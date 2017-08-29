@@ -8,41 +8,37 @@ categories:
 tags:
   - R
   - code
+editor_options: 
+  chunk_output_type: console
 ---
 
+*Note: the following post is supposed to be updated regularly*
 
-*Note: in the following doc, many R's error messages are displayed in French*
+## Style guides
 
-## References
+Two references are unavoidable, the [Hadley's style guide](http://adv-r.had.co.nz/Style.html) and the [Google's R style guide](https://google.github.io/styleguide/Rguide.xml). And also [*The R Inferno* by Patrick Burns](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
 
-[*The R Inferno* by Patrick Burns](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
+Has Hadley wrote, the most important is to have a consistent and clear style.
 
-[Hadley's style guide](http://adv-r.had.co.nz/Style.html)
+## Notations
 
-[Google's R style guide](https://google.github.io/styleguide/Rguide.xml)
+Starting with variable, choices doesn't really matters.
 
-
-## Style guide
-
-Two references are unavoidable, the [Hadley's style guide](http://adv-r.had.co.nz/Style.html) and the [Google's R style guide](https://google.github.io/styleguide/Rguide.xml).
-
-Has Hadley wrote, the most important is to have a consistent style, and clear.
-
-In the following document, I use:
-
+I use this style of notation
 
 ```{r, eval=FALSE}
 # GOOD
-variable.Name
 variableName
 variable_Name
+
+# Not that good (personnal taste)
+variable.Name
 
 # BAD
 variablename
 ```
 
-
-I also like to write the name of the variable in fist and then it's specification:
+I also like to write the name of the variable in first and then it's specification:
 
 ```{r, eval=FALSE}
 # GOOD
@@ -51,31 +47,20 @@ kk_max = max(kk)
 kk_sd = sd(kk)
 kk_log10Mean = log10(mean(kk))
 
-km = 1:10
-km_max = max(km)
-km_sd = sd(km)
-km_log10Mean = log10(mean(km))
-
-# BAD
+# BAD (personnal taste)
 max_kk = max(kk)
 sd_kk = sd(kk)
 log10Mean_kk = log10(mean(kk))
-
-max_km = max(km)
-sd_km = sd(km)
-log10Mean_km = log10(mean(km))
 ```
-
 
 ## Don't do
 
-Some letters are use in `R`, like `T` use for the boolean `TRUE`, therefore, do not use as variable:
-
+Some letters are use in `R`, like `T` which is used for the boolean `TRUE`, therefore, do not use as variable:
 
 ```{r, eval=FALSE}
 # BAD
-T # TRUE
-F # FALSE
+T 
+F 
 TRUE
 FALSE
 
@@ -84,7 +69,10 @@ Temperature ; Total
 Fox ; Flower
 ```
 
-Function already use:
+
+### name of functions
+
+I do not have a definitive point of view for naming function. Of course, I do not use name already used:
 
 ```{r, eval=FALSE}
 # BAD
@@ -92,13 +80,35 @@ c() # vector
 lm() # linear model
 ```
 
-## `<-` or `=`
+And I use S3 dispatch when necessary, with the **generic functions** `plot.myClass`, `print.myClass`, `summary.myClass`, ...
+
+Look at the difference for Figures \@ref(fig:withoutS3plot) and See Figure \@ref(fig:withS3plot)
+
+```{r withoutS3plot, fig.env='ici'}
+a <- data.frame(col1 = 1:10, col2 = 1:10)
+
+plot(a)
+```
+
+
+```{r withS3plot, fig.cap='Result of S3 dispatch on class myClass.'}
+class(a) <- "myClass"
+
+plot.myClass = function(x) plot(x[[1]] ~ x[[2]], type = "l")
+
+plot(a)
+```
+
+
+### Assignement operator: `<-` or `=`
 
 Big question in R:
 [revolutionanalytics?](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
 [stackoverflow](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and)
 
-Let's take this function: `median(x, na.rm = FALSE, ...)`, and look at this:
+Following the answer on [stackoverflow](https://stackoverflow.com/questions/1741820/assignment-operators-in-r-and) by [Richie Cotton](https://stackoverflow.com/users/134830/richie-cotton), lets
+
+Let's take this function: `median(x, na.rm = FALSE, ...)`, and look at all of these codes:
 
 ```{r, eval=FALSE}
 median(x <- 1:10)
@@ -113,9 +123,77 @@ b
 median(b <- 1:10)
 b
 ```
+Another thing to test to understand difference between `=` and `<-`
 
+```{r, eval=FALSE}
+a <- b = 5
+a = b = 5 ; a ; b
+a = 5 = b
+6 -> c ; c
+c <- 6 -> d ; c ; d
+```
 
-## Loop
+When you create a `data.frame`, or a `list`, you have to use `=` inside, while `<-` does not return an error:
+
+```{r}
+myDf1 <- data.frame(e <- 6) ; myDf1
+myDf2 <- data.frame(e = 6) ; myDf2 
+
+myList1 <- list(e <- 6) ; myList1
+myList2 <- list(e = 6) ; myList2
+```
+
+Finally, just use **space** in a write way to avoid the following mistake:
+
+```{r}
+a <- 3
+a< -3
+```
+
+Finally, I use `<-` operator for assignement, and `=` inside functions.
+
+### Spacing
+
+Spacing is used to have a clear code.
+* Spaces around assignements: `a = b`, `a <- b`
+* A space after a coma: `myMatrix[2, 2]`
+* No space in brackets: `c(1, 4, 9)` 
+* Change of line every 80 characters
+* Change of line when repetting an assignement
+
+```{r}
+# GOOD
+myList <- list(a = 1,
+               b = "fourchette",
+               c = letters[1:10],
+               d = 1:10,
+               e = matrix(1:9, ncol=3),
+               f = "couteau",
+               g = "chocolat")
+
+myList[[5]][2, 2]
+
+## GOOD but, I would put this long text in a separate file, and then load it
+text_Miserable_Review <- "Tant qu’il existera, par le fait des lois et des
+moeurs, une damnation sociale créant artificiellement, en pleine civilisation,
+des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ;
+tant que les trois problèmes du siècle, la dégradation de l’homme par le
+prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par
+la nuit, ne seront pas résolus ; tant que, dans de certaines régions, 
+l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue 
+plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des
+livres de la nature de celui-ci pourront ne pas être inutiles."
+
+# BAD
+myList <- list(a = 1, b = "fourchette", c = letters[1:10], d = 1:10, e = matrix(1:9, ncol=3), f = "couteau", g = "chocolat")
+
+text_Miserable_Review <- "Tant qu’il existera, par le fait des lois et des moeurs, une damnation sociale créant artificiellement, en pleine civilisation, des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ; tant que les trois problèmes du siècle, la dégradation de l’homme par le prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par la nuit, ne seront pas résolus ; tant que, dans de certaines régions, l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des livres de la nature de celui-ci pourront ne pas être inutiles."
+
+# Very BAD
+myList<-list(a=1,b="fourchette",c=letters[1:10],d=1:10,e=matrix(1:9,ncol=3),f="couteau",g="chocolat")
+```
+
+### `ifelse` what else
 
 ```{r, eval=FALSE}
 # GOOD
@@ -125,13 +203,13 @@ if (y == 0) {
   y ^ x
 }
 
-# BAD
+# GOOD if less than 80 characters
+if (y == 0) log(x)
+
+# GOOD also
 if (y == 0) {
   log(x)
-}
-else {
-  y ^ x
-}
+} else stop("error message")
 ```
 
 
@@ -153,7 +231,6 @@ Difference between `&` and `&&`
 ((-2:2) >= 0) & ((-2:2) <= 0)
 ((-2:2) >= 0) && ((-2:2) <= 0)
 ```
-
 
 Difference between `|` and `||`
 
