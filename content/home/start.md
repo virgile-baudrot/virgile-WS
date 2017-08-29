@@ -18,4 +18,4 @@ lesquelles constituent très exactement les dépendances qui sont les conditions
 
 **Edgar Morin** - *Le paradigme perdu : la nature humaine (1973)*
 
-[^citationMorin]: *The more autonomous a living system is, the more it is dependent on the ecosystem. Indeed, autonomy assumes complexity, which presupposes a very great richness of interactions of all kinds with the environment, that is to say depends on interconnections, which constitute very exactly the dependencies which are the conditions of relative independence.*
+[^citationMorin]: A translation could be: *The more autonomous a living system is, the more it is dependent on the ecosystem. Indeed, autonomy assumes complexity, which presupposes a very great richness of interactions of all kinds with the environment, that is to say depends on interconnections, which constitute very exactly the dependencies which are the conditions of relative independence.*

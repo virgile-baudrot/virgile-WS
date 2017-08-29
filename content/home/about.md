@@ -52,10 +52,10 @@ More specifically, I am a young researcher in *EcoHealth* sciences, and for now 
 
 I did a PhD on *modeling trophic interaction including transfert of biological and chemical contaminants*, with several applications with the parasite *Echinococcus multilocularis*  for the eco-epidemiological part and on *heavy metals* for the ecotoxicological part.
 
-The question underlying my research is *how contaminants, such as chemical compounds and parasites, are transfered within a food web and how the structure and composition of the fodd web respond to it?*
+The question underlying my research is *how contaminants, such as chemical compounds and parasites, are transfered within a food webs and how structures and compositions of food webs respond to them?*
 
 And to answer those questions, I develop *dynamical systems* and *Bayesian models*.
 
-$$ \mathcal{S}kills=\int_\Omega f(ecology,theory,dynamic,Bayes) d \omega $$
+$$ \mathcal{S}kills=\int_\Omega f(ecology \, of \, contaminants, \, ODE, \, Bayes) d \omega $$
 
 
