@@ -56,6 +56,6 @@ The question underlying my research is *how contaminants, such as chemical compo
 
 And to answer those questions, I develop *dynamical systems* and *Bayesian models*.
 
-$$ \mathcal{S}kills=\int_\Omega f(ecology \, of \, contaminants, \, ODE, \, Bayes) d \omega $$
+$$ \mathcal{S}kills=\int_\Omega f(EcoHealth, \, ODE, \, Bayes) d \omega $$
 
 
