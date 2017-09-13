@@ -8,7 +8,7 @@ categories:
 tags:
   - R
   - code
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -16,19 +16,19 @@ editor_options:
 
 ## Style guides
 
-Two references are unavoidable, the [Hadley's style guide](http://adv-r.had.co.nz/Style.html) and the [Google's R style guide](https://google.github.io/styleguide/Rguide.xml). And also [*The R Inferno* by Patrick Burns](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
+Some references are unavoidable, the [Hadley's style guide](http://adv-r.had.co.nz/Style.html), the [Google's R style guide](https://google.github.io/styleguide/Rguide.xml), and also [*The R Inferno* by Patrick Burns](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
 
-Has Hadley wrote, the most important is to have a consistent and clear style.
+As Hadley wrote, the most important is to have *a consistent and clear style*.
 
 ## Notations
 
 Starting with variable, choices doesn't really matters.
 
-I use this style of notation
+I use this style of notation:
 
 ```{r, eval=FALSE}
 # GOOD
-variableName
+variableName # camelCasing style
 variable_Name
 
 # Not that good (personnal taste)
@@ -37,6 +37,8 @@ variable.Name
 # BAD
 variablename
 ```
+
+I like the *camelCasing* when the capital letters look like the humps on a camel's back (e.g. `camelBack`).
 
 I also like to write the name of the variable in first and then it's specification:
 
@@ -53,14 +55,28 @@ sd_kk = sd(kk)
 log10Mean_kk = log10(mean(kk))
 ```
 
+So then, variables have the follwing look:
+
+```{r, eval=FALSE}
+# GOOD
+frenchMen_weight <- c(80, 84, 74)
+frenchMen_size <- c(180, 175, 176)
+frenchWomen_weight <- c(NA, 75, 65)
+frenchWomen_size <- c(160, 177, 167)
+
+frenchMen_sizeMean <- mean(frenchMen_size)
+frenchMen_sizeSD <- sd(frenchMen_size)
+```
+
+
 ## Don't do
 
 Some letters are use in `R`, like `T` which is used for the boolean `TRUE`, therefore, do not use as variable:
 
 ```{r, eval=FALSE}
 # BAD
-T 
-F 
+T
+F
 TRUE
 FALSE
 
@@ -137,7 +153,7 @@ When you create a `data.frame`, or a `list`, you have to use `=` inside, while `
 
 ```{r}
 myDf1 <- data.frame(e <- 6) ; myDf1
-myDf2 <- data.frame(e = 6) ; myDf2 
+myDf2 <- data.frame(e = 6) ; myDf2
 
 myList1 <- list(e <- 6) ; myList1
 myList2 <- list(e = 6) ; myList2
@@ -157,7 +173,7 @@ Finally, I use `<-` operator for assignement, and `=` inside functions.
 Spacing is used to have a clear code.
 * Spaces around assignements: `a = b`, `a <- b`
 * A space after a coma: `myMatrix[2, 2]`
-* No space in brackets: `c(1, 4, 9)` 
+* No space in brackets: `c(1, 4, 9)`
 * Change of line every 80 characters
 * Change of line when repetting an assignement
 
@@ -179,8 +195,8 @@ moeurs, une damnation sociale créant artificiellement, en pleine civilisation,
 des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ;
 tant que les trois problèmes du siècle, la dégradation de l’homme par le
 prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par
-la nuit, ne seront pas résolus ; tant que, dans de certaines régions, 
-l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue 
+la nuit, ne seront pas résolus ; tant que, dans de certaines régions,
+l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue
 plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des
 livres de la nature de celui-ci pourront ne pas être inutiles."
 
@@ -252,4 +268,3 @@ TRUE | a
 FALSE & a
 # Erreur : objet 'a' introuvable
 ```
-
