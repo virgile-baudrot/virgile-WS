@@ -8,7 +8,7 @@ categories:
 tags:
   - R
   - code
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -17,15 +17,15 @@ editor_options:
 <p><em>Note: the following post is supposed to be updated regularly</em></p>
 <div id="style-guides" class="section level2">
 <h2>Style guides</h2>
-<p>Two references are unavoidable, the <a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a> and the <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a>. And also <a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"><em>The R Inferno</em> by Patrick Burns</a></p>
-<p>Has Hadley wrote, the most important is to have a consistent and clear style.</p>
+<p>Some references are unavoidable, the <a href="http://adv-r.had.co.nz/Style.html">Hadley’s style guide</a>, the <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R style guide</a>, and also <a href="http://www.burns-stat.com/pages/Tutor/R_inferno.pdf"><em>The R Inferno</em> by Patrick Burns</a></p>
+<p>As Hadley wrote, the most important is to have <em>a consistent and clear style</em>.</p>
 </div>
 <div id="notations" class="section level2">
 <h2>Notations</h2>
 <p>Starting with variable, choices doesn’t really matters.</p>
-<p>I use this style of notation</p>
+<p>I use this style of notation:</p>
 <pre class="r"><code># GOOD
-variableName
+variableName # camelCasing style
 variable_Name
 
 # Not that good (personnal taste)
@@ -33,6 +33,7 @@ variable.Name
 
 # BAD
 variablename</code></pre>
+<p>I like the <em>camelCasing</em> when the capital letters look like the humps on a camel’s back (e.g. <code>camelBack</code>).</p>
 <p>I also like to write the name of the variable in first and then it’s specification:</p>
 <pre class="r"><code># GOOD
 kk = 1:5
@@ -44,13 +45,22 @@ kk_log10Mean = log10(mean(kk))
 max_kk = max(kk)
 sd_kk = sd(kk)
 log10Mean_kk = log10(mean(kk))</code></pre>
+<p>So then, variables have the follwing look:</p>
+<pre class="r"><code># GOOD
+frenchMen_weight &lt;- c(80, 84, 74)
+frenchMen_size &lt;- c(180, 175, 176)
+frenchWomen_weight &lt;- c(NA, 75, 65)
+frenchWomen_size &lt;- c(160, 177, 167)
+
+frenchMen_sizeMean &lt;- mean(frenchMen_size)
+frenchMen_sizeSD &lt;- sd(frenchMen_size)</code></pre>
 </div>
 <div id="dont-do" class="section level2">
 <h2>Don’t do</h2>
 <p>Some letters are use in <code>R</code>, like <code>T</code> which is used for the boolean <code>TRUE</code>, therefore, do not use as variable:</p>
 <pre class="r"><code># BAD
-T 
-F 
+T
+F
 TRUE
 FALSE
 
@@ -68,14 +78,14 @@ lm() # linear model</code></pre>
 <pre class="r"><code>a &lt;- data.frame(col1 = 1:10, col2 = 1:10)
 
 plot(a)</code></pre>
-<p><img src="/"/"  # End your URL with a `/` trailing slash.post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withoutS3plot-1.png" width="672" /></p>
+<p><img src="/post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withoutS3plot-1.png" width="672" /></p>
 <pre class="r"><code>class(a) &lt;- &quot;myClass&quot;
 
 plot.myClass = function(x) plot(x[[1]] ~ x[[2]], type = &quot;l&quot;)
 
 plot(a)</code></pre>
 <div class="figure"><span id="fig:withS3plot"></span>
-<img src="/"/"  # End your URL with a `/` trailing slash.post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withS3plot-1.png" alt="Result of S3 dispatch on class myClass." width="672" />
+<img src="/post/2017-08-24-personnal-coding-rules-in-r_files/figure-html/withS3plot-1.png" alt="Result of S3 dispatch on class myClass." width="672" />
 <p class="caption">
 Figure 1: Result of S3 dispatch on class myClass.
 </p>
@@ -107,7 +117,7 @@ c &lt;- 6 -&gt; d ; c ; d</code></pre>
 <pre class="r"><code>myDf1 &lt;- data.frame(e &lt;- 6) ; myDf1</code></pre>
 <pre><code>##   e....6
 ## 1      6</code></pre>
-<pre class="r"><code>myDf2 &lt;- data.frame(e = 6) ; myDf2 </code></pre>
+<pre class="r"><code>myDf2 &lt;- data.frame(e = 6) ; myDf2</code></pre>
 <pre><code>##   e
 ## 1 6</code></pre>
 <pre class="r"><code>myList1 &lt;- list(e &lt;- 6) ; myList1</code></pre>
@@ -142,8 +152,8 @@ moeurs, une damnation sociale créant artificiellement, en pleine civilisation,
 des enfers, et compliquant d’une fatalité humaine la destinée qui est divine ;
 tant que les trois problèmes du siècle, la dégradation de l’homme par le
 prolétariat, la déchéance de la femme par la faim, l’atrophie de l’enfant par
-la nuit, ne seront pas résolus ; tant que, dans de certaines régions, 
-l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue 
+la nuit, ne seront pas résolus ; tant que, dans de certaines régions,
+l’asphyxie sociale sera possible ; en d’autres termes, et à un point de vue
 plus étendu encore, tant qu’il y aura sur la terre ignorance et misère, des
 livres de la nature de celui-ci pourront ne pas être inutiles.&quot;
 
