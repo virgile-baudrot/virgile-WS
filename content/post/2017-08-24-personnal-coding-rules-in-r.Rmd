@@ -12,7 +12,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-*Note: the following post is supposed to be updated regularly*
+> Disclaimer: the following post is supposed to be updated regularly. To see the history of edits (and the date of the last version), you can go to the [github repository for this post](https://github.com/virgile-baudrot/virgile-WS/commits/master/content/post/2017-08-24-personnal-coding-rules-in-r.Rmd)
 
 ## Style guides
 
