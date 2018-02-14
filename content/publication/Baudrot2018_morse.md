@@ -17,8 +17,8 @@
   
   title = "morse: Modelling Tools for Reproduction and Survival Data in Ecotoxicology"
   
-  url_html = "https://cran.r-project.org/src/contrib/morse_3.0.0.tar.gz"
-  url_project = ""
+  url_pdf = "https://cran.r-project.org/web/packages/morse/morse.pdf"
+  url_project = "https://github.com/pveber/morse"
   
   
   [[url_custom]]
