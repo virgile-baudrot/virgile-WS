@@ -229,7 +229,7 @@ if (y == 0) {
 ```
 
 
-## Functions
+## Functions messaging the user
 
 - Deprecated: `deprecate()`
 - Errors: `stop()`
