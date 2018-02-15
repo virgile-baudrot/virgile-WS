@@ -1,24 +1,24 @@
 +++
 
-abstract = ""
+  abstract = ""
+  
+  authors = ["Virgile Baudrot", "Sara Preux", "Virginie Ducrot", "Alain Pavé", "Sandrine Charles"]
 
-authors = ["Virgile Baudrot", "Antoine Perasso", "Clémentine Fritsch", "Patrick Giraudoux", "Francis Raoul"]
-
-date = "2016-07-01"
+date = "2018-01-23"
 
 image_preview = ""
 math = true
 publication_types = ["2"]
-publication = "In *Ecology*. 97(7):1832-1841"
-publication_short = "In *Ecology*"
+publication = "In *Environmental Science and Technology*. 52(3):1582-1590"
+publication_short = "In *ES&T*"
 selected = true
 
-DOI_publi = "10.1890/15-0427.1"
+  DOI_publi = "10.1021/acs.est.7b05464"
 
-title = "The adaptation of generalist predators diet in a multi-prey context: insights from new functional responses"
-
-url_pdf = "https://www.researchgate.net/publication/303531926_The_adaptation_of_generalist_predators%27_diet_in_a_multi-prey_context_insights_from_new_functional_responses"
-url_project = "project/trophicR/"
+  title = "New insights to compare and choose TKTD models for survival based on an inter-laboratory study for *Lymnaea stagnalis* exposed to Cd"
+  
+  url_pdf = "https://www.researchgate.net/profile/Virgile_Baudrot-UCBL/publication/322239510_New_Insights_to_Compare_and_Choose_TKTD_Models_for_Survival_Based_on_an_Interlaboratory_Study_for_Lymnaea_stagnalis_Exposed_to_Cd/links/5a683e5f4585159da0dabbbd/New-Insights-to-Compare-and-Choose-TKTD-Models-for-Survival-Based-on-an-Interlaboratory-Study-for-Lymnaea-stagnalis-Exposed-to-Cd.pdf"
+  url_project = ""
 
 
 [[url_custom]]
