@@ -42,11 +42,11 @@ than classical dose-response model at a given target time (TT) has poorly been
 investigated. Our paper highlights that GUTS estimates are generally more
 conservative and have a reduced uncertainty through smaller credible intervals
 for the studied data sets than classical TT approaches. Also, GUTS models enable
-estimating any x% lethal concentration at any time ($LC_{x,t}$), and provide
+estimating any x% lethal concentration at any time (*LC(x,t)*), and provide
 biological information on the internal processes occurring during the experiments.
 While both GUTS-SD and GUTS-IT models outcompete classical TT approaches, choosing
 one preferentially to the other is still challenging. Indeed, the estimates
-of survival rate over time and $LC_{x,t}$ are very close between both models,
+of survival rate over time and *LC(x,t)* are very close between both models,
 but our study also points out that the joint posterior distributions of SD model
 parameters are sometimes bimodal, while two parameters of the IT model seems
 strongly correlated. Therefore, the selection between these two models has to

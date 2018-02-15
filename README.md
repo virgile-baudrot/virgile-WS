@@ -20,4 +20,4 @@ To add a new publication, the best is to copy/past a previous publication.
 
 # Syntax in articles
 
-LaTeX syntax have to be carrefully used.
+The LATEX syntax does not work ! Resulting in failed in the publication of posts.
