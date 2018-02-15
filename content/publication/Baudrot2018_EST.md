@@ -22,33 +22,37 @@ selected = true
 
 
 [[url_custom]]
-name = "Journal Link"
-url = "http://onlinelibrary.wiley.com/doi/10.1890/15-0427.1/full"
+  name = "Journal Link"
+  url = "https://pubs.acs.org/doi/abs/10.1021/acs.est.7b05464"
+  
+  # Optional featured image (relative to `static/img/` folder).
+  [header]
+  image = ""
+  caption = ""
+  +++
 
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
-+++
-
-## Abstract
-
-The ability for a generalist consumer to adapt its foraging strategy (the multi-species functional response, MSFR) is a milestone in ecology as it contributes to the structure of food webs. The trophic interaction between a generalist predator, as the red fox or the barn owl, and its prey community, mainly composed of small mammals, has been empirically and theoretically widely studied. However, the extent to which these predators adapt their diet according to both multi-annual changes in multiple prey species availability (frequency dependence) and the variation of the total prey density (density dependence) is unexplored.We provide a new general model of MSFR disentangling changes in prey preference according to variation of prey frequency (switching) and of total prey density (we propose the new concept of “rank switching”). We apply these models to two large data sets of red fox and barn owl foraging. We show that both frequency-dependent and density-dependent switching are critical properties of these two systems, suggesting that barn owl and red fox have an accurate image of the prey community in terms of frequency and absolute density. Moreover, we show that negative switching, which can lead to prey instability, is a strong property of the two systems.
-
-##  Keywords
-
-predation ; preference ; prey community ; rank switching ; switching ; *Tyto alba* ; *Vulpes vulpes*
-
-
-### Citation in bibtex
-
-```
-@article{Baudrot2016Ecology,
-  title={The adaptation of generalist predators diet in a multi-prey context: insights from new functional responses},
-  author={Baudrot, Virgile and Perasso, Antoine and Fritsch, Clémentine and Giraudoux, Patrick and Raoul, Francis},
-  journal={Ecology},
-  year={2016},
-  pages={1832--1841},
-  volume={97}
-}
-```
+  
+    ## Abstract
+    
+    Toxicokinetic-toxicodynamic (TKTD) models, as the General Unified Threshold model of Survival (GUTS), provide a consistent process-based framework compared to classical dose-response models to analyze both time and concentration-dependent data sets. However, the extent to which GUTS models (Stochastic Death (SD) and Individual Tolerance (IT)) lead to a better fitting than classical dose-response model at a given target time (TT) has poorly been investigated. Our paper highlights that GUTS estimates are generally more conservative and have a reduced uncertainty through smaller credible intervals for the studied data sets than classical TT approaches. Also, GUTS models enable estimating any $x\%$ lethal concentration at any time ($LC_{x,t}$), and provide biological information on the internal processes occurring during the experiments. While both GUTS-SD and GUTS-IT models outcompete classical TT approaches, choosing one preferentially to the other is still challenging. Indeed, the estimates of survival rate over time and $LC_{x,t}$ are very close between both models, but our study also points out that the joint posterior distributions of SD model parameters are sometimes bimodal, while two parameters of the IT model seems strongly correlated. Therefore, the selection between these two models has to be supported by the experimental design and the biological objectives, and this paper provides some insights to drive this choice.
+  
+  ##  Keywords
+  
+  GUTS models, classical dose-response models, constant exposure, aquatic toxicity, $x\%$ lethal concentration
+  
+  
+  ### Citation in bibtex
+  
+  ```
+  @Article{Baudrot2018EST,
+    author    = {Baudrot, Virgile and Preux, Sara and Ducrot, Virginie and Pavé, Alain and Charles, Sandrine},
+    title     = {New insights to compare and choose TKTD models for survival based on an inter-laboratory study for \emph{Lymnaea stagnalis} exposed to Cd},
+    journal   = {Environmental science \& technology},
+    year      = {2018},
+    date      = {2018-01-23},
+    number    = {52},
+    issue     = {3},
+    doi       = {10.1021/acs.est.7b05464},
+    publisher = {ACS Publications}
+  }
+  ```
