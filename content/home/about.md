@@ -46,13 +46,13 @@ weight = 2
 
 In the network of my research interests, the hub is the following question:
 
-## How contaminants travel into food webs?
+## How food webs dynamics, struture and stability are impacted by environmental stressors?
 
 More specifically, I am a young researcher in *EcoHealth* sciences, and for now I am a postdoc at the CNRS Lab LBBE in the University of Lyon 1.
 
-I did a PhD on *modeling trophic interaction including transfert of biological and chemical contaminants*, with several applications with the parasite *Echinococcus multilocularis*  for the eco-epidemiological part and on *heavy metals* for the ecotoxicological part.
+I did a PhD at the Université Bourgogne Franche-Comté on *modeling trophic interaction including transfert of biological and chemical contaminants*, with several applications with the parasite *Echinococcus multilocularis*  for the eco-epidemiological part and on *heavy metals* for the ecotoxicological part.
 
-The question underlying my research is *how contaminants, such as chemical compounds and parasites, are transfered within a food webs and how structures and compositions of food webs respond to them?*
+The question underlying my research is *how contaminants, such as chemical compounds and parasites, are transfered within a food webs and more importantly how structures and compositions of food webs respond to them?*
 
 And to answer those questions, I develop *dynamical systems* and *Bayesian models*.
 
