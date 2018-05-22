@@ -4,6 +4,7 @@
 
 This web site as been generated with the `blogdown` R package.
 
+For more information about 'blogdown': [blogdown book website](https://bookdown.org/yihui/blogdown/)
 
 # Add new content
 
@@ -21,3 +22,8 @@ To add a new publication, the best is to copy/past a previous publication.
 # Syntax in articles
 
 The LATEX syntax does not work ! Resulting in failed in the publication of posts.
+
+# For publication
+
+- Project is *Gitted* on the Github repository [virgile-WS](https://github.com/virgile-baudrot/virgile-WS)
+- Netlify is then used to deployed the website [netlify](https://www.netlify.com/)
