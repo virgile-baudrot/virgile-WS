@@ -1,8 +1,8 @@
 +++
 
-  abstract = ""
+abstract = ""
   
-  authors = ["Virgile Baudrot", "Sara Preux", "Virginie Ducrot", "Alain Pavé", "Sandrine Charles"]
+authors = ["Virgile Baudrot", "Sara Preux", "Virginie Ducrot", "Alain Pavé", "Sandrine Charles"]
 
 date = "2018-01-23"
 
