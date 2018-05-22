@@ -4,7 +4,7 @@ abstract = ""
 
 authors = ["Virgile Baudrot", "Philippe Veber", "Guillaume Gence", "Sandrine Charles"]
 
-date = "2018-05-??"
+date = "2018-05-20"
 
 image_preview = ""
 math = true
