@@ -13,7 +13,7 @@ publication = "In *Integrated Environmental Assessment and Management*. ??:??-??
 publication_short = "In *IEAM*"
 selected = true
 
-DOI_publi = ""
+DOI_publi = "10.1002/ieam.4061"
 
 title = "Fit GUTS reduced models online: from theory to practice"
 
