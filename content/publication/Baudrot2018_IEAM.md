@@ -9,7 +9,7 @@ date = "2018-05-20"
 image_preview = ""
 math = true
 publication_types = ["2"]
-publication = "In *Integrated Environmental Assessment and Management*. ??:??-??"
+publication = "In *Integrated Environmental Assessment and Management*. 14(5):625-630"
 publication_short = "In *IEAM*"
 selected = true
 
@@ -37,7 +37,8 @@ Mechanistic modelling approaches, as the toxicokinetic-toxicodynamic (TKTD) fram
   
   ##  Keywords
   
-  --, --, --
+Toxicokinetics-toxicodynamics, Survival, Web interface, Bayesian inference, LCx estimates
+
   
   ### Citation in bibtex
   
