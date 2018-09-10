@@ -35,11 +35,11 @@ caption = ""
     
 Within the current context of global change, ecosystems face simultaneously multiple stressors such as environmental pollution, excessive enrichment, and additional disturbances affecting population dynamics. Numerous theoretical and empirical studies explored the transfer of contaminants by food ingestion between trophic levels, and how contaminant effects on survival and fecundity may change regime shifts of classical predator-prey dynamics. However, the extent to which those contaminants may influence the cascade effect of external stressors, as a change in resources (bottom-up cascade) or a variation in predator abundance (top-down cascade) is still poorly understood. We develop a data-driven model to explore how soil contamination modulate the food chain stability and resilience to changes in prey nutrient and in the apex predator mortality rate. We particularly focus on the ecotoxicological impact of the trace metal, cadmium, on a widespread raptor, the barn owl (*Tyto alba*), feeding on several prey distinct by their trophic positions: herbivores (*Microtus* spp), omnivores (wood mouse *Apodemus sylvaticus* and bank vole *Myodes glareolus*) and insectivores (shrews: *Crocidura* spp and *Sorex* spp). Our model reveals the alternative steady states in population dynamics and the occurrence and position of regime shifts where a subtle change in conditions causes a sudden shift in the ecological system. Based on mathematical modelling and bifurcation analysis, the results show for instance that under toxicity threshold, where no population decline is observed, the contaminant weakens food-chain resilience. Then at higher contamination, the toxic effects on predator releases the top-down control over prey that may increase. This range of chemical stress overturns the paradox of enrichment, a central concept in trophic cascade theory. The transition phase at the highest contamination, where the whole community collapse, exhibits multiple patterns, from smooth to abrupt, depending on external stressors and the prey population. Thus, this work provides a methodology to identify ecological traits of preys that are critical for transferring adverse effects of contaminants across the whole community.
   
-  ##  Keywords
+##  Keywords
   
   Critical transitions, Contaminant transfer, Food chain, Ordinary differential equations
   
-  ### Citation in bibtex
+### Citation in bibtex
   
   ```
   @Article{Baudrot2018EcoMod,
