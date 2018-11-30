@@ -24,7 +24,7 @@ math = false
 # Optional featured image (relative to `static/img/` folder).
 [header]
 image = "headers/trophicR_chauvet_wide.jpg"
-caption = "Image credit: [**Stephen Alvarez** for **National Geographic**](http://proof.nationalgeographic.com/2015/01/05/shooting-chauvet-photographing-the-worlds-oldest-cave-art/)"
+caption = "Image credit: [**Stephen Alvarez** for **National Geographic**](https://proof.nationalgeographic.com/2015/01/05/shooting-chauvet-photographing-the-worlds-oldest-cave-art/)"
 
 +++
 

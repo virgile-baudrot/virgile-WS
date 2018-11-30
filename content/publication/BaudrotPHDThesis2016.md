@@ -36,9 +36,9 @@ Bourgogne Franche-Comté
 
 **Laboratoire** | [UMR 6249 CNRS Chrono-environnement](https://chrono-environnement.univ-fcomte.fr/?lang=en) Besançon (France) 
 
-**Ecole doctorale** | [ED 554 Environnements-Santé](http://www.ecoledoctoralee2s.com/) 
+**Ecole doctorale** | [ED 554 Environnements-Santé](https://www.ecoledoctoralee2s.com/) 
 
-**Université** | [UBFC - Université Bourgogne Franche-Comté](http://www.ubfc.fr/) 
+**Université** | [UBFC - Université Bourgogne Franche-Comté](https://www.ubfc.fr/) 
 
 ### Modeling of food web interactions involving transfer of biological and chemical contaminants. Application to *Echinococcus multilocularis* and trace elements.
 

@@ -18,7 +18,7 @@ url_pdf = "https://www.researchgate.net/publication/298425903_Competence_of_host
 
 [[url_custom]]
 name = "Journal Link"
-url = "http://www.sciencedirect.com/science/article/pii/S002251931600151X"
+url = "https://www.sciencedirect.com/science/article/pii/S002251931600151X"
 
 # Optional featured image (relative to `static/img/` folder).
 [header]

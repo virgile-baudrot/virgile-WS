@@ -23,7 +23,7 @@ url_project = "project/trophicR/"
 
 [[url_custom]]
 name = "Journal Link"
-url = "http://onlinelibrary.wiley.com/doi/10.1890/15-0427.1/full"
+url = "https://onlinelibrary.wiley.com/doi/10.1890/15-0427.1/full"
 
 # Optional featured image (relative to `static/img/` folder).
 [header]
