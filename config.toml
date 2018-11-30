@@ -21,12 +21,12 @@ defaultContentLanguageInSubdir = false
 [params]
   name = "Virgile Baudrot"
   role = "Researcher (PostDoc) in EcoHealth"
-  organization = "CNRS & Lyon University"
-  organization_url = "https://lbbe.univ-lyon1.fr/"
+  organization = "INRA - BioSP Avignon"
+  organization_url = "https://informatique-mia.inra.fr/biosp/accueil"
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "ID_picture_reduction.png"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "virgile.baudrot@posteo.net"
-  address = "LBBE University Lyon 1"
+  address = "INRA - BioSP Avignon"
   ## office_hours = "Monday 10:00 to 13:00 or email for appointment"
   ## phone = "-"
   skype = "virgile baudrot"
