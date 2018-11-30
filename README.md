@@ -13,9 +13,25 @@ then in the file corresponding to the type of article.
 
 To add a new post with Rstudio, the best is to use the `addin` `New Post` or
 with the `blogdown` R package use the following code:
+
 ```
 blogdown::new_post()
 ```
+
+# Place to look at for any changes
+
+To change something in the global (pictures, institution, menus, ...), see: `config.toml`
+
+- Darwin tree picture: `public`-> `img`
+- ID picture: `public`-> `img`
+
+- `Home`:  `content` -> `home` -> `start.md`
+- `About Me`:  `content` -> `home` -> `about.md`. To change about left banner (picture, position, links), see `config.toml` and `public`-> `img`
+- `Publications`: `content` -> `publication`
+- `Posts`: `content` -> `post`
+- `Projects`: `content` -> `project` (the log for trophicR is in `public`-> `img`)
+- `Teaching`: `content` -> `home` -> `teaching.md`
+- `Contact`: `content` -> `about` -> `contact.md`
 
 To add a new publication, the best is to copy/past a previous publication.
 
