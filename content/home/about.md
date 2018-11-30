@@ -16,7 +16,9 @@ weight = 2
     "Data Science [R]",
     "Modelling",
     "Ecotoxicology",
-    "Eco-epidemiology"
+    "Eco-epidemiology",
+    "Bayesian Statistics",
+    "Spatial models"
   ]
 
 # List your qualifications (such as academic degrees).

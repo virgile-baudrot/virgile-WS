@@ -152,6 +152,11 @@ defaultContentLanguageInSubdir = false
     icon_pack = "fa"
 link = "https://www.linkedin.com/in/virgile-baudrot-03a08195"
 
+  [[params.social]]
+    icon = "publons"
+    icon_pack = "ai"
+    link = "https://publons.com/author/1485723/virgile-baudrot#stats"
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
