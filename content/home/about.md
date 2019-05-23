@@ -50,7 +50,7 @@ In the network of my research interests, the hub is the following question:
 
 ## How food webs structure, dynamics and stability are modulated by environmental stressors?
 
-More specifically, I am a young researcher in *EcoHealth* sciences, and for now I am a postdoc at the CNRS Lab LBBE in the University of Lyon 1.
+More specifically, I am a young researcher in *EcoHealth* sciences, and for now I am a postdoc at [INRA Lab BioSP in Avignon](https://informatique-mia.inra.fr/biosp/accueil) (France).
 
 I did a PhD at the Université Bourgogne Franche-Comté on *modeling trophic interaction including transfert of biological and chemical contaminants*, with several applications with the parasite *Echinococcus multilocularis*  for the eco-epidemiological part and on *heavy metals* for the ecotoxicological part.
 
